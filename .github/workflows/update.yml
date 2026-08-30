@@ -1,0 +1,52 @@
+name: Wetterdaten aktualisieren
+
+# Holt einmal täglich die neuen Werte und veröffentlicht die Seite neu.
+# Der Lauf ist zustandslos: Er baut die Historie jedes Mal frisch aus dem
+# Open-Meteo-Archiv auf. Dadurch gibt es nichts, was auseinanderlaufen kann.
+
+on:
+  schedule:
+    - cron: '30 5 * * *'   # täglich 05:30 UTC = 07:30 Berlin (Sommerzeit)
+  workflow_dispatch:        # zusätzlich jederzeit von Hand startbar
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Daten holen
+        run: npm run update
+
+      - name: Seite erzeugen
+        run: npm run site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

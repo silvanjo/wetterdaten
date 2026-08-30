@@ -1,0 +1,201 @@
+/* Layout im Stil der Vorlagenseite: dunkle Kopfzeile und Seitenleiste,
+   helle Inhaltsfläche, Karten mit dezentem Rahmen. Ohne Framework. */
+
+:root {
+  --dark: #212529;
+  --dark-soft: #2b3035;
+  --muted: #adb5bd;
+  --border: #e3e6ea;
+  --bg: #ffffff;
+  --bg-soft: #f8f9fa;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --accent: #0d6efd;
+  --warm: #e8590c;
+  --cool: #1c7ed6;
+  --sidebar-width: 225px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Kopfzeile ---------------------------------------------------------- */
+.topnav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 52px;
+  padding: 0 1rem;
+  background: var(--dark);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.brand { color: #fff; font-size: 1.15rem; font-weight: 600; }
+.brand:hover { text-decoration: none; }
+.sidebar-toggle {
+  background: none; border: 0; color: #fff; cursor: pointer;
+  padding: .35rem; border-radius: 4px; display: inline-flex;
+}
+.sidebar-toggle:hover { background: rgba(255, 255, 255, .12); }
+
+/* --- Seitenleiste ------------------------------------------------------- */
+.layout { display: flex; min-height: calc(100vh - 52px); }
+
+.sidenav {
+  width: var(--sidebar-width);
+  flex: 0 0 var(--sidebar-width);
+  background: var(--dark);
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: margin-left .2s ease;
+}
+.layout.collapsed .sidenav { margin-left: calc(-1 * var(--sidebar-width)); }
+
+.sidenav .nav { display: flex; flex-direction: column; padding: .5rem 0; }
+.sidenav-heading {
+  padding: 1.1rem 1rem .35rem;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #6c757d;
+}
+.nav-link {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .6rem 1rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+.nav-link:hover { color: #fff; background: var(--dark-soft); text-decoration: none; }
+.nav-link.active { color: #fff; background: var(--dark-soft); font-weight: 600; }
+.nav-icon { display: inline-flex; opacity: .75; }
+
+.sidenav-footer {
+  padding: .9rem 1rem;
+  background: var(--dark-soft);
+  font-size: .8rem;
+  color: var(--muted);
+}
+.sidenav-footer .small { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; opacity: .7; }
+
+/* --- Inhalt ------------------------------------------------------------- */
+.content { flex: 1; min-width: 0; background: var(--bg); }
+.container { max-width: 1320px; padding: 1.6rem 1.5rem 2.5rem; }
+
+h1 { font-size: 2.4rem; font-weight: 500; margin: .4rem 0 .2rem; }
+.subtitle { color: var(--text-muted); margin: 0 0 1.4rem; }
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  background: var(--bg);
+}
+.card-header {
+  display: flex; align-items: center; gap: .55rem; flex-wrap: wrap;
+  padding: .75rem 1rem;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+.card-meta { margin-left: auto; font-weight: 400; font-size: .85rem; color: var(--text-muted); }
+.card-body { padding: 1rem; }
+
+.note { margin: .9rem 0 0; font-size: .85rem; color: var(--text-muted); }
+
+/* --- Symbole ------------------------------------------------------------ */
+.wx-icon {
+  width: 26px; height: 26px; flex: none; overflow: visible;
+  /* Über <use> vererben sich nur CSS-Eigenschaften in den Schattenbaum –
+     stehen Fill und Stroke nur als Attribute am Sprite, bleiben die
+     Symbole schwarz ausgefüllt. */
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.wx-icon-sm { width: 17px; height: 17px; }
+.wx-icon-md { width: 20px; height: 20px; }
+.wx-icon-inline { vertical-align: -3px; margin-right: .45rem; opacity: .65; }
+
+/* --- Vorhersage --------------------------------------------------------- */
+.chart-wrap { position: relative; height: 260px; margin-bottom: 1rem; }
+
+.fc-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(84px, 1fr);
+  gap: .5rem;
+  overflow-x: auto;
+  padding-bottom: .4rem;
+}
+.fc-day {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .6rem .4rem;
+  text-align: center;
+  background: var(--bg-soft);
+}
+.fc-date { font-size: .76rem; color: var(--text-muted); white-space: nowrap; }
+.fc-icon { display: flex; justify-content: center; margin: .35rem 0 .3rem; color: var(--text-muted); }
+.fc-temp { font-size: .9rem; }
+.fc-max { font-weight: 600; color: var(--warm); }
+.fc-min { color: var(--cool); margin-left: .35rem; }
+.fc-rain { font-size: .78rem; color: var(--text-muted); margin-top: .2rem; }
+.fc-prob { font-size: .72rem; color: var(--cool); }
+
+/* --- Tabelle ------------------------------------------------------------ */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+th, td { padding: .55rem .6rem; text-align: left; border-bottom: 1px solid var(--border); }
+thead th { border-bottom: 2px solid var(--border); font-weight: 600; white-space: nowrap; }
+tbody tr:nth-child(odd) { background: #fbfbfc; }
+tbody tr:hover { background: #f1f3f5; }
+
+.badge {
+  display: inline-block; margin-left: .4rem; padding: .05rem .4rem;
+  border-radius: 999px; font-size: .7rem; font-weight: 600;
+}
+.badge-provisional { background: #fff3cd; color: #8a6100; border: 1px solid #ffe69c; }
+
+/* simple-datatables an das übrige Erscheinungsbild angleichen */
+.datatable-wrapper .datatable-top,
+.datatable-wrapper .datatable-bottom { padding: 0 0 .8rem; font-size: .88rem; color: var(--text-muted); }
+.datatable-wrapper .datatable-bottom { padding: .8rem 0 0; }
+.datatable-input, .datatable-selector {
+  padding: .3rem .5rem; border: 1px solid var(--border); border-radius: 4px;
+  font: inherit; font-size: .88rem;
+}
+.datatable-pagination a { padding: .3rem .6rem; border-radius: 4px; color: var(--accent); }
+.datatable-pagination .datatable-active a { background: var(--accent); color: #fff; }
+
+/* --- Fuß ---------------------------------------------------------------- */
+.footer {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between;
+  border-top: 1px solid var(--border); padding-top: 1rem;
+  font-size: .82rem; color: var(--text-muted);
+}
+
+/* Auf schmalen Bildschirmen liegt die Leiste über dem Inhalt statt daneben.
+   Die Klasse "collapsed" bedeutet in beiden Fällen dasselbe: eingeklappt. */
+@media (max-width: 800px) {
+  .sidenav { position: fixed; top: 52px; bottom: 0; z-index: 15; box-shadow: 0 0 24px rgba(0, 0, 0, .3); }
+  .container { padding: 1.2rem 1rem 2rem; }
+  h1 { font-size: 1.9rem; }
+}

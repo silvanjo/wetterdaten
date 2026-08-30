@@ -1,0 +1,26 @@
+{
+  "name": "wetterdaten",
+  "version": "1.0.0",
+  "description": "Wetterarchiv und Vorhersage f\u00fcr Gro\u00df Kreutz (Havel) und Berlin",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "update": "npm run build && node --disable-warning=ExperimentalWarning dist/update.js",
+    "site": "npm run build && node --disable-warning=ExperimentalWarning dist/site.js",
+    "all": "npm run update && npm run site",
+    "serve": "node --disable-warning=ExperimentalWarning dist/serve.js",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "simple-datatables": "^10.3.0"
+  }
+}
