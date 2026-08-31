@@ -1,8 +1,13 @@
 name: Wetterdaten aktualisieren
 
 # Holt einmal täglich die neuen Werte und veröffentlicht die Seite neu.
-# Der Lauf ist zustandslos: Er baut die Historie jedes Mal frisch aus dem
-# Open-Meteo-Archiv auf. Dadurch gibt es nichts, was auseinanderlaufen kann.
+# Die Historie wird jedes Mal frisch aus dem Open-Meteo-Archiv aufgebaut,
+# es gibt also keinen Zustand, der auseinanderlaufen könnte.
+#
+# Der Schreibschritt am Ende ist kein Selbstzweck: GitHub schaltet geplante
+# Workflows nach 60 Tagen ohne Repository-Aktivität ab. Der tägliche Commit
+# des Datenstands hält den Zeitplan am Leben – und hinterlässt nebenbei eine
+# nachvollziehbare Historie, wann welcher Stand veröffentlicht wurde.
 
 on:
   schedule:
@@ -10,7 +15,7 @@ on:
   workflow_dispatch:        # zusätzlich jederzeit von Hand startbar
 
 permissions:
-  contents: read
+  contents: write   # für den täglichen Commit des Datenstands
   pages: write
   id-token: write
 
@@ -36,6 +41,19 @@ jobs:
 
       - name: Seite erzeugen
         run: npm run site
+
+      - name: Datenstand festschreiben
+        run: |
+          cp public/daten/*.json data/
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "Keine Änderung am Datenstand."
+          else
+            git commit -m "Datenstand $(date -u +%F)"
+            git push
+          fi
 
       - uses: actions/upload-pages-artifact@v3
         with:
