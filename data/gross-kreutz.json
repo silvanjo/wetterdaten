@@ -6,7 +6,7 @@
     "longitude": 12.7794,
     "region": "Brandenburg"
   },
-  "generatedAt": "24.09.2026, 07:40",
+  "generatedAt": "25.09.2026, 07:41",
   "days": [
     {
       "date": "2022-06-27",
@@ -16979,7 +16979,7 @@
       "precipitationProbability": null,
       "kind": "measured",
       "source": "archive",
-      "fetchedAt": "2026-09-24T05:40:28.662Z"
+      "fetchedAt": "2026-09-25T05:41:01.002Z"
     },
     {
       "date": "2026-09-17",
@@ -16990,7 +16990,7 @@
       "precipitationProbability": null,
       "kind": "measured",
       "source": "archive",
-      "fetchedAt": "2026-09-24T05:40:28.662Z"
+      "fetchedAt": "2026-09-25T05:41:01.002Z"
     },
     {
       "date": "2026-09-18",
@@ -17001,18 +17001,18 @@
       "precipitationProbability": null,
       "kind": "measured",
       "source": "archive",
-      "fetchedAt": "2026-09-24T05:40:28.662Z"
+      "fetchedAt": "2026-09-25T05:41:01.002Z"
     },
     {
       "date": "2026-09-19",
-      "tempMax": 20.9,
-      "tempMin": 11.5,
+      "tempMax": 20.8,
+      "tempMin": 12.3,
       "precipitation": 0,
-      "weatherCode": 61,
-      "precipitationProbability": 48,
+      "weatherCode": 3,
+      "precipitationProbability": null,
       "kind": "measured",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "source": "archive",
+      "fetchedAt": "2026-09-25T05:41:01.002Z"
     },
     {
       "date": "2026-09-20",
@@ -17023,7 +17023,7 @@
       "precipitationProbability": 50,
       "kind": "measured",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-09-21",
@@ -17034,7 +17034,7 @@
       "precipitationProbability": 15,
       "kind": "measured",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-09-22",
@@ -17045,7 +17045,7 @@
       "precipitationProbability": 0,
       "kind": "measured",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-09-23",
@@ -17056,183 +17056,194 @@
       "precipitationProbability": 0,
       "kind": "measured",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-09-24",
-      "tempMax": 15.8,
+      "tempMax": 15.7,
       "tempMin": 12.6,
-      "precipitation": 0.8,
-      "weatherCode": 80,
+      "precipitation": 0.6,
+      "weatherCode": 61,
       "precipitationProbability": 93,
-      "kind": "forecast",
+      "kind": "measured",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-09-25",
-      "tempMax": 16.3,
-      "tempMin": 8.8,
+      "tempMax": 15.2,
+      "tempMin": 9.4,
       "precipitation": 0,
       "weatherCode": 3,
-      "precipitationProbability": 5,
+      "precipitationProbability": 3,
       "kind": "forecast",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-09-26",
-      "tempMax": 21.5,
-      "tempMin": 6.1,
+      "tempMax": 20.4,
+      "tempMin": 5.8,
       "precipitation": 0,
       "weatherCode": 3,
-      "precipitationProbability": 5,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-09-27",
-      "tempMax": 21.4,
-      "tempMin": 10.3,
-      "precipitation": 0,
-      "weatherCode": 3,
-      "precipitationProbability": 3,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-09-28",
-      "tempMax": 24.5,
-      "tempMin": 12.3,
-      "precipitation": 0,
-      "weatherCode": 3,
-      "precipitationProbability": 7,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-09-29",
-      "tempMax": 26.2,
-      "tempMin": 13.7,
-      "precipitation": 0,
-      "weatherCode": 3,
-      "precipitationProbability": 9,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-09-30",
-      "tempMax": 26.2,
-      "tempMin": 14.3,
-      "precipitation": 0,
-      "weatherCode": 2,
-      "precipitationProbability": 3,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-10-01",
-      "tempMax": 21.7,
-      "tempMin": 11.8,
-      "precipitation": 0,
-      "weatherCode": 0,
-      "precipitationProbability": 10,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-10-02",
-      "tempMax": 21.1,
-      "tempMin": 13.3,
-      "precipitation": 0.9,
-      "weatherCode": 51,
-      "precipitationProbability": 17,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-10-03",
-      "tempMax": 19,
-      "tempMin": 13,
-      "precipitation": 0.6,
-      "weatherCode": 51,
-      "precipitationProbability": 15,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-10-04",
-      "tempMax": 16.2,
-      "tempMin": 9.7,
-      "precipitation": 0.9,
-      "weatherCode": 51,
-      "precipitationProbability": 12,
-      "kind": "forecast",
-      "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
-    },
-    {
-      "date": "2026-10-05",
-      "tempMax": 15.8,
-      "tempMin": 8.3,
-      "precipitation": 0.3,
-      "weatherCode": 51,
       "precipitationProbability": 8,
       "kind": "forecast",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
-      "date": "2026-10-06",
-      "tempMax": 17.2,
-      "tempMin": 8.9,
-      "precipitation": 0.3,
-      "weatherCode": 51,
-      "precipitationProbability": 12,
+      "date": "2026-09-27",
+      "tempMax": 21,
+      "tempMin": 12.1,
+      "precipitation": 0,
+      "weatherCode": 3,
+      "precipitationProbability": 0,
       "kind": "forecast",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
-      "date": "2026-10-07",
+      "date": "2026-09-28",
+      "tempMax": 25.2,
+      "tempMin": 12.7,
+      "precipitation": 0,
+      "weatherCode": 3,
+      "precipitationProbability": 0,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-09-29",
+      "tempMax": 25.6,
+      "tempMin": 13.3,
+      "precipitation": 0,
+      "weatherCode": 3,
+      "precipitationProbability": 3,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-09-30",
+      "tempMax": 21.9,
+      "tempMin": 12.8,
+      "precipitation": 0,
+      "weatherCode": 3,
+      "precipitationProbability": 0,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-01",
+      "tempMax": 22.7,
+      "tempMin": 10.5,
+      "precipitation": 0,
+      "weatherCode": 0,
+      "precipitationProbability": 0,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-02",
+      "tempMax": 20.8,
+      "tempMin": 8.8,
+      "precipitation": 2.4,
+      "weatherCode": 51,
+      "precipitationProbability": 24,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-03",
+      "tempMax": 17.8,
+      "tempMin": 9.7,
+      "precipitation": 0,
+      "weatherCode": 1,
+      "precipitationProbability": 13,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-04",
       "tempMax": 19.2,
-      "tempMin": 10,
+      "tempMin": 9,
       "precipitation": 0,
       "weatherCode": 3,
       "precipitationProbability": 16,
       "kind": "forecast",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-05",
+      "tempMax": 20.4,
+      "tempMin": 10.1,
+      "precipitation": 0,
+      "weatherCode": 3,
+      "precipitationProbability": 20,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-06",
+      "tempMax": 20.2,
+      "tempMin": 9.7,
+      "precipitation": 0,
+      "weatherCode": 3,
+      "precipitationProbability": 14,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-07",
+      "tempMax": 19.3,
+      "tempMin": 9.4,
+      "precipitation": 0,
+      "weatherCode": 1,
+      "precipitationProbability": 13,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-10-08",
-      "tempMax": 17.7,
-      "tempMin": 10.8,
-      "precipitation": 0.6,
-      "weatherCode": 51,
-      "precipitationProbability": null,
+      "tempMax": 20.9,
+      "tempMin": 10.7,
+      "precipitation": 0,
+      "weatherCode": 0,
+      "precipitationProbability": 22,
       "kind": "forecast",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     },
     {
       "date": "2026-10-09",
-      "tempMax": 14,
-      "tempMin": 8.5,
-      "precipitation": 2.1,
-      "weatherCode": 51,
+      "tempMax": 15.5,
+      "tempMin": 7.5,
+      "precipitation": 3.15,
+      "weatherCode": 53,
       "precipitationProbability": null,
       "kind": "forecast",
       "source": "forecast_api",
-      "fetchedAt": "2026-09-24T05:40:29.441Z"
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
+    },
+    {
+      "date": "2026-10-10",
+      "tempMax": 9,
+      "tempMin": 5.9,
+      "precipitation": 3.6,
+      "weatherCode": 53,
+      "precipitationProbability": null,
+      "kind": "forecast",
+      "source": "forecast_api",
+      "fetchedAt": "2026-09-25T05:41:01.559Z"
     }
   ]
 }
